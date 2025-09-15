@@ -10,12 +10,12 @@ export async function POST(request: NextRequest) {
     const { name, email, message } = body
 
     console.log("[v0] Environment variables check:", {
-      hasRegion: !!process.env.AWS_REGION,
-      hasAccessKey: !!process.env.AWS_ACCESS_KEY_ID,
-      hasSecretKey: !!process.env.AWS_SECRET_ACCESS_KEY,
-      hasTableName: !!process.env.AWS_DYNAMODB_TABLE_NAME,
-      region: process.env.AWS_REGION,
-      tableName: process.env.AWS_DYNAMODB_TABLE_NAME,
+      hasRegion: !!process.env.MY_AWS_REGION,
+      hasAccessKey: !!process.env.MY_AWS_ACCESS_KEY_ID,
+      hasSecretKey: !!process.env.MY_AWS_SECRET_ACCESS_KEY,
+      hasTableName: !!process.env.MY_DYNAMODB_TABLE_NAME,
+      region: process.env.MY_AWS_REGION,
+      tableName: process.env.MY_DYNAMODB_TABLE_NAME,
     })
 
     // Validate required fields
